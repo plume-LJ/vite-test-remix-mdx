@@ -15,7 +15,7 @@ export type PostMeta = {
 export const getPosts = async (): Promise<PostMeta[]> => {
   const modules = import.meta.glob<{ frontmatter: Frontmatter }>(
     "../routes/blog.*.mdx",
-    { eager: true }
+    { eager: true },
   );
   const build = await import("virtual:remix/server-build");
   const posts = Object.entries(modules).map(([file, post]) => {
@@ -34,7 +34,7 @@ export const getPosts = async (): Promise<PostMeta[]> => {
 function sortBy<T>(
   arr: T[],
   key: (item: T) => any,
-  dir: "asc" | "desc" = "asc"
+  dir: "asc" | "desc" = "asc",
 ) {
   return arr.sort((a, b) => {
     const res = compare(key(a), key(b));

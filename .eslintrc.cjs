@@ -14,6 +14,9 @@ module.exports = {
       jsx: true,
     },
   },
+  globals: {
+    process: true
+  },
   env: {
     browser: true,
     commonjs: true,
@@ -74,6 +77,14 @@ module.exports = {
       files: [".eslintrc.js"],
       env: {
         node: true,
+      },
+    },
+
+    {
+      files: ['**/components/ui/*.tsx'], 
+      rules: {
+        'react/prop-types': [2, { ignore: ['className'] }],
+        'react-refresh/only-export-components': 'off',
       },
     },
   ],

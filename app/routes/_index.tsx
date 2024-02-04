@@ -13,11 +13,11 @@ export default function Index() {
   const featuredPosts = useLoaderData<typeof loader>();
 
   return (
-    <div className="flex-1 p-10 grid sm:grid-cols-2 gap-16 sm:place-items-center">
+    <div className="grid flex-1 gap-16 p-10 sm:grid-cols-2 sm:place-items-center">
       <div className="space-y-8">
         <div>
           <h2 className="text-4xl font-bold">Remix 🤝 MDX</h2>
-          <p className="text-gray-600 font-light">
+          <p className="font-light text-gray-600">
             Powered by Vite plugins. Check out the{" "}
             <a href="https://github.com/pcattori/remix-blog-mdx">
               code on Github
