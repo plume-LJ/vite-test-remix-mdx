@@ -24,6 +24,15 @@ export default defineConfig({
               route("/posts", "routes/posts/index.tsx", () => {
                 route("/posts/first-post", "routes/posts/first-post.mdx");
               });
+              route("/form", "routes/form/index.tsx", () => {
+                route("/form", "routes/form/_index.tsx", { index: true });
+                route("/form/:formId", "routes/form/$form.tsx");
+              });
+              route("/recipes", "routes/recipes/index.tsx", () => {
+                route("/recipes", "routes/recipes/_index.tsx", { index: true });
+                route("/recipes/:recipeId", "routes/recipes/$recipe.tsx");
+                route("/recipes/new", "routes/recipes/new.tsx");
+              });
             });
           },
         })
