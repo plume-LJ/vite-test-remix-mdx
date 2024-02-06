@@ -80,10 +80,11 @@ module.exports = {
       },
     },
 
+    // shadcn/ui
     {
       files: ['**/components/ui/*.tsx'], 
       rules: {
-        'react/prop-types': [2, { ignore: ['className'] }],
+        'react/prop-types': [2, { ignore: ['className', 'sideOffset', 'checked'] }],
         'react-refresh/only-export-components': 'off',
       },
     },
